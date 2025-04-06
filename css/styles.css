@@ -501,6 +501,7 @@ color: #fff;
 .footer-form-in{
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 
 .footer-button { 
@@ -516,9 +517,7 @@ color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   align-items: center;
-  margin-left: 16px;
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
@@ -533,6 +532,7 @@ color: #fff;
 
 .footer-btn-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /********************** MODAL WINDOW ************************/
@@ -559,7 +559,7 @@ color: #fff;
 
 .modal-window {
 width: 408px;
-height: 584px;
+min-height: 584px;
 border-radius: 4px;
 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -568,8 +568,7 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -577,22 +576,30 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 
 }
 
 .form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
     width: 24px;
     height: 24px;
-    border: none;
+    
   position: absolute;
   top: 24px;
-  right: 24px; border: #2E2F42;
+  right: 24px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     stroke-width: 1px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .form-button:hover,
 .form-button:focus + .icon-btn-modal-top {
-  background-color: #404BBF;
+  background-color: #404bbf;
   fill: #FFFFFF;
+  border: none;
 }
 
 .icon-btn-modal-top {
@@ -609,7 +616,6 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 
     text-align: center;
     max-width: 360px;
     margin-bottom: 16px;
-    padding-top: 72px;
 }
 
 .modal-input {  
@@ -625,9 +631,10 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 
 }
 
 .input-label {
+  display: block;
   font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: inline-block;
@@ -642,30 +649,18 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 
     fill:#4D5AE5;
   }
 
-.form-button-bottom {
-  font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
-    border-radius: 4px;
-      padding: 16px 32px;
-      width: 169px;
-      height: 56px;
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-        background-color: #4d5ae5;
-        display: block;
-        margin: 0 auto;
-}
 
 .modal-field {
 font-weight: 400;
 font-size: 12px;
-line-height: 1.16667;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99; 
-margin-bottom: 8px;
+margin-bottom: 4px;
+}
+
+.modal-field-area {
+  margin-bottom: 16px;
 }
 
 .modal-wrapper {
@@ -678,23 +673,32 @@ margin-bottom: 8px;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-modal {
 border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
+color: rgba(46, 47, 66, 0.4);
+background-color: transparent; 
+outline: transparent;
+border-radius: 4px;
   width: 100%;
   height: 120px;
   font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16667;
-    letter-spacing: 0.04em;    
-    resize: none;
-    padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;    
+  resize: none;
+  padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-modal::placeholder {
   color: rgba(46, 47, 66, 0.4);
+}
+
+.textarea-modal:focus {
+  border-color: #4D5AE5;
 }
 
 .modal-link {
@@ -705,13 +709,12 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 
 .form-field {
   margin-bottom: 24px;
-  margin-top: 16px;
 }
 
 .input-label {
 font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 
@@ -738,7 +741,7 @@ span {
   border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 12px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
@@ -762,3 +765,26 @@ span {
   clip: rect(0 0 0 0);
   overflow: hidden;
 } 
+.form-button-bottom {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4D5AE5;
+  display: block;
+  margin: 0 auto;
+  }
+  
+.form-button-bottom:hover,
+.form-button-bottom:focus {
+  background-color: #404BBF;
+}
