@@ -171,7 +171,6 @@
 align-items: center;
 border-radius: 4px;
 margin: 48px auto 0; 
-/* padding: 16px 32px; */
 min-width: 169px;
 height: 56px;
 border: none;
@@ -460,5 +459,304 @@ box-shadow:
 .footer-icons-items {
   fill: #F4F4FD;
   margin: auto;  
+} 
+
+.footer-right {
+  margin-left: 80px;
 }
 
+.footer-text-right {
+  font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+} 
+
+.footer-input {
+  border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    padding-left: 16px;
+    outline: transparent;
+}
+.footer-input:focus {
+  border-color: #31D0AA;
+}
+
+input::placeholder {
+  font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.footer-form-in{
+  display: flex;
+  align-items: center;
+}
+
+.footer-button { 
+  font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: #fff;
+  padding: 8px 24px;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  margin-left: 16px;
+  border-radius: 4px;
+  min-width: 165px;
+  height: 40px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: #31D0AA;
+}
+
+.footer-btn-icon {
+  fill: #fff;
+}
+
+/********************** MODAL WINDOW ************************/
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+} 
+
+.modal-window {
+width: 408px;
+height: 584px;
+border-radius: 4px;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.form-button {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px; border: #2E2F42;
+    background-color: #e7e9fc;
+    stroke-width: 1px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.form-button:hover,
+.form-button:focus + .icon-btn-modal-top {
+  background-color: #404BBF;
+  fill: #FFFFFF;
+}
+
+.icon-btn-modal-top {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-text {
+  font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    text-align: center;
+    max-width: 360px;
+    margin-bottom: 16px;
+    padding-top: 72px;
+}
+
+.modal-input {  
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.input-label {
+  font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+  .modal-input:focus {
+    border-color: #4D5AE5;
+  }
+  
+.modal-input:focus + .modal-icons {
+    fill:#4D5AE5;
+  }
+
+.form-button-bottom {
+  font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+      padding: 16px 32px;
+      width: 169px;
+      height: 56px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        background-color: #4d5ae5;
+        display: block;
+        margin: 0 auto;
+}
+
+.modal-field {
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: 0.04em;
+color: #8e8f99; 
+margin-bottom: 8px;
+}
+
+.modal-wrapper {
+  position: relative;
+}
+
+.modal-icons {
+  fill:#2e2f42;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.textarea-modal {
+border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;    
+    resize: none;
+    padding: 8px 16px;
+}
+
+.textarea-modal::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.form-field {
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+.input-label {
+font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+
+}
+
+.checkbox-text {
+font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+} 
+span {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+}
+.modal-checkbox:checked + .checkbox-text span {
+  background-color: #4d5ae5;
+  border: none;
+  fill: #fafafa; 
+} 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
